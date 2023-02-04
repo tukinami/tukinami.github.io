@@ -1,0 +1,42 @@
+---
+import Icon_DarkMode from "../components/icon/dark_mode.astro";
+import Icon_LightMode from "../components/icon/light_mode.astro";
+---
+
+<div class="theme-selector">
+  <Icon_LightMode />
+  <span class="toggle-switch">
+    <input
+      id="theme-toggle-switch"
+      class="toggle-switch__input"
+      type="checkbox"
+    />
+    <label for="theme-toggle-switch" class="toggle-switch__label"></label>
+  </span>
+  <Icon_DarkMode />
+</div>
+
+<script>
+  const localStorageKey = "is-dark-mode";
+  const themeToggleSwitchRaw = document.querySelector(
+    "input#theme-toggle-switch"
+  );
+
+  const switchToDarkMode = (isDarkMode: boolean) => {
+    localStorage.setItem(localStorageKey, String(isDarkMode));
+  };
+
+  if (themeToggleSwitchRaw !== null) {
+    const themeToggleSwitch = themeToggleSwitchRaw as HTMLInputElement;
+
+    const isDarkMode = localStorage.getItem(localStorageKey);
+    themeToggleSwitch.checked = isDarkMode === String(true);
+
+    themeToggleSwitch.addEventListener("change", () => {
+      document.documentElement.classList[
+        themeToggleSwitch.checked ? "add" : "remove"
+      ]("theme-dark");
+      switchToDarkMode(themeToggleSwitch.checked);
+    });
+  }
+</script>

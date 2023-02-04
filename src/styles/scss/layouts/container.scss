@@ -1,0 +1,23 @@
+@use "../templates/mixins/_container" as _mixins_container;
+
+@use "../variables/shapes" as _var_shapes;
+
+.container {
+  min-height: calc(
+    100vh - _var_shapes.$header-height - _var_shapes.$footer-height
+  );
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+  padding-inline-start: 0.5rem;
+  padding-inline-end: 0.5rem;
+
+  @include _mixins_container.container();
+
+  & > *:first-child {
+    margin-block-start: 0;
+  }
+
+  & > *:last-child {
+    margin-block-end: 0;
+  }
+}

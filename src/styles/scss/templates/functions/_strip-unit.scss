@@ -1,0 +1,8 @@
+// ref: https://zenn.dev/tak_dcxi/articles/2cc1828e9c1fe2
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}

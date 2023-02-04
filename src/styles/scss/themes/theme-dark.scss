@@ -1,0 +1,48 @@
+@use "../templates/variables/colors" as _var_colors;
+@use "../templates/functions/colors" as _func_colors;
+
+:root.theme-dark {
+  --color-base: #171a26;
+  --color-base-text: #{_func_colors.invert-gray(#171a26)};
+
+  --color-shaded: #{_var_colors.$color-gray-dark};
+  --color-shaded-text: #{_var_colors.$color-gray-light};
+
+  --color-error-text: #{_var_colors.$color-danger-light};
+
+  --color-link-text: #dba7ff;
+  --color-link-active-text: #f1d0ff;
+
+  --color-primary: #0c345c;
+  --color-primary-text: #{_func_colors.invert-gray(#0c345c)};
+  --color-primary-weak: #06284d;
+  --color-primary-weak-text: #{_func_colors.invert-gray(#06284d)};
+  --color-primary-strong: #14487c;
+  --color-primary-strong-text: #{_func_colors.invert-gray(#14487c)};
+
+  $color-primary-shaded-dark: _func_colors.darken(#0c345c);
+  --color-primary-shaded: #{$color-primary-shaded-dark};
+  --color-primary-shaded-text: #{_func_colors.invert-gray(
+      $color-primary-shaded-dark
+    )};
+
+  --color-secondary: #85331a;
+  --color-secondary-text: #{_func_colors.invert-gray(#85281a)};
+  --color-secondary-weak: #622017;
+  --color-secondary-weak-text: #{_func_colors.invert-gray(#622017)};
+  --color-secondary-strong: #903727;
+  --color-secondary-strong-text: #{_func_colors.invert-gray(#903727)};
+
+  $color-secondary-shaded-dark: _func_colors.darken(#85281a);
+  --color-secondary-shaded: #{$color-secondary-shaded-dark};
+  --color-secondary-shaded-text: #{_func_colors.invert-gray(
+      $color-secondary-shaded-dark
+    )};
+
+  --color-border-base: #{_func_colors.darken(_var_colors.$color-gray-middle)};
+  --color-border-weak: #{_var_colors.$color-gray-dark};
+
+  --color-filter-base: #{_var_colors.$color-filter-black};
+
+  --color-shadow-base: #{_var_colors.$color-filter-black-thick};
+}

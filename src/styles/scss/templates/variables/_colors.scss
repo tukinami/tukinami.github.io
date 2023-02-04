@@ -1,0 +1,47 @@
+@use "sass:color";
+
+$_middle-blue: #156bb2;
+$_middle-cyan: #00789c;
+$_middle-purple: #55498c;
+$_middle-green: #2a7c0c;
+$_middle-yellow: #a67908;
+$_middle-red: #a41666;
+
+$color-primary: $_middle-blue !default;
+$color-link: $_middle-cyan !default;
+$color-info: $_middle-purple !default;
+$color-success: $_middle-green !default;
+$color-warning: $_middle-yellow !default;
+$color-danger: $_middle-red !default;
+
+$color-primary-light: color.scale($color-primary, $lightness: 40%) !default;
+$color-link-light: color.scale($color-link, $lightness: 40%) !default;
+$color-info-light: color.scale($color-info, $lightness: 40%) !default;
+$color-success-light: color.scale($color-success, $lightness: 40%) !default;
+$color-warning-light: color.scale($color-warning, $lightness: 40%) !default;
+$color-danger-light: color.scale($color-danger, $lightness: 40%) !default;
+
+$color-primary-dark: color.scale($color-primary, $lightness: -40%) !default;
+$color-link-dark: color.scale($color-link, $lightness: -40%) !default;
+$color-info-dark: color.scale($color-info, $lightness: -40%) !default;
+$color-success-dark: color.scale($color-success, $lightness: -40%) !default;
+$color-warning-dark: color.scale($color-warning, $lightness: -40%) !default;
+$color-danger-dark: color.scale($color-danger, $lightness: -40%) !default;
+
+$color-gray-black: hsl(0, 0%, 4%) !default;
+$color-gray-dark: hsl(0, 0%, 20%) !default;
+$color-gray-middle: hsl(0, 0%, 45%) !default;
+$color-gray-light: hsl(0, 0%, 77%) !default;
+$color-gray-white: hsl(0, 0%, 96%) !default;
+
+$color-filter-black-thick: hsla(0, 0%, 4%, 80%) !default;
+$color-filter-black: hsla(0, 0%, 4%, 30%) !default;
+$color-filter-black-thin: hsla(0, 0%, 4%, 9%) !default;
+$color-filter-white-thick: hsla(0, 0%, 98%, 60%) !default;
+$color-filter-white: hsla(0, 0%, 98%, 30%) !default;
+$color-filter-white-thin: hsla(0, 0%, 98%, 12%) !default;
+
+$color-text-base: $color-gray-dark !default;
+$color-border-base: $color-gray-light !default;
+
+$color-adjust-step: 10%;

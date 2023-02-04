@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import WorksPostLink from "../components/WorksPostLink.astro";
+
+const allWorks = await Astro.glob("../pages/works-posts/*.md");
+const pageTitle = "制作物";
+---
+
+<BaseLayout title={pageTitle}>
+  <h1>{pageTitle}</h1>
+  <div class="works-post-list">
+    {
+      allWorks.map((work) => (
+        <WorksPostLink
+          title={work.frontmatter.title}
+          description={work.frontmatter.description}
+          thumbnail={work.frontmatter.thumbnail}
+          thumbnailAlt={work.frontmatter.thumbnailAlt}
+          url={work.url}
+        />
+      ))
+    }
+  </div>
+</BaseLayout>

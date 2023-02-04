@@ -1,0 +1,18 @@
+@use "sass:color";
+@use "../variables/_colors" as _var_colors;
+
+@function invert-gray($color) {
+  @if color.lightness($color) > 50% {
+    @return _var_colors.$color-gray-black;
+  } @else {
+    @return _var_colors.$color-gray-white;
+  }
+}
+
+@function darken($color) {
+  @return color.scale($color, $lightness: 0% - _var_colors.$color-adjust-step);
+}
+
+@function lighten($color) {
+  @return color.scale($color, $lightness: 0% + _var_colors.$color-adjust-step);
+}

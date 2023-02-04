@@ -1,0 +1,40 @@
+---
+export interface Props {
+  dataTarget: string;
+}
+
+const { dataTarget } = Astro.props;
+---
+
+<a
+  role="button"
+  class="hamburger"
+  aria-label="menu"
+  aria-expanded="false"
+  data-target={dataTarget}
+>
+  <span class="hamburger__line hamburger__line--top"></span>
+  <span class="hamburger__line hamburger__line--middle"></span>
+  <span class="hamburger__line hamburger__line--bottom"></span>
+</a>
+
+<script>
+  const hamburgers = document.querySelectorAll(".hamburger");
+
+  hamburgers.forEach((element) => {
+    element.addEventListener("click", () => {
+      const targetId = (element as HTMLElement).dataset.target;
+      const targetElement =
+        targetId !== undefined
+          ? document.getElementById(targetId) ?? undefined
+          : undefined;
+
+      element.ariaExpanded = element.ariaExpanded === "true" ? "false" : "true";
+      element.classList.toggle("hamburger--active");
+
+      if (targetElement !== undefined) {
+        targetElement.classList.toggle("expand-menu--active");
+      }
+    });
+  });
+</script>

@@ -1,0 +1,11 @@
+---
+export interface Props {
+  tagName: string;
+}
+
+const { tagName } = Astro.props;
+---
+
+<p class="tag-link">
+  <a class="tag-link__body" href={`/tags/${tagName}`}>{tagName}</a>
+</p>

@@ -1,0 +1,49 @@
+@use "_responsive" as _responsive;
+@use "_map-to-props" as _map-to-props;
+
+@mixin container($xs: null, $sm: null, $md: null, $lg: null, $xl: null, $xxl: null) {
+    margin: 0 auto;
+
+    @include _responsive.responsive(xs) {
+        width: 100%;
+
+        @if $xs {
+            @include _map-to-props.map-to-props($xs);
+        }
+    }
+    @include _responsive.responsive(sm) {
+        max-width: 540px;
+
+        @if $sm {
+            @include _map-to-props.map-to-props($sm);
+        }
+    }
+    @include _responsive.responsive(md) {
+        max-width: 720px;
+
+        @if $md {
+            @include _map-to-props.map-to-props($md);
+        }
+    }
+    @include _responsive.responsive(lg) {
+        max-width: 960px;
+
+        @if $lg {
+            @include _map-to-props.map-to-props($lg);
+        }
+    }
+    @include _responsive.responsive(xl) {
+        max-width: 1140px;
+
+        @if $xl {
+            @include _map-to-props.map-to-props($xl);
+        }
+    }
+    @include _responsive.responsive(xxl) {
+        max-width: 1320px;
+
+        @if $xxl {
+            @include _map-to-props.map-to-props($xxl);
+        }
+    }
+}

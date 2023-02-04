@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import WorkItem from "../../components/WorksPostLink.astro";
+import type { MarkdownInstance } from "astro";
+
+export interface Params {
+  tag: string;
+}
+
+export interface Props {
+  works: MarkdownInstance<Record<string, any>>[];
+}
+
+export interface getStaticPathsReturn {
+  params: Params;
+  props: Props;
+}
+
+export async function getStaticPaths(): Promise<getStaticPathsReturn[]> {
+  const allWorks = await Astro.glob("../works-posts/*.md");
+
+  const uniqueTags = [
+    ...new Set(allWorks.map((work) => work.frontmatter.tags).flat()),
+  ] as string[];
+
+  return uniqueTags.map((tag) => {
+    const filteredWorks = allWorks.filter((work) =>
+      work.frontmatter.tags.includes(tag)
+    );
+    return {
+      params: { tag },
+      props: { works: filteredWorks },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { works } = Astro.props;
+---
+{ tag === undefined ? <></> : (
+<BaseLayout title={`${tag}がついたページ`}>
+  <h1><span>{tag}</span>がついたページ</h1>
+  <div class="works-post-list">
+    {
+      works.map((work) => (
+        <WorkItem title={work.frontmatter.title}
+          description={work.frontmatter.description}
+          thumbnail={work.frontmatter.thumbnail}
+          thumbnailAlt={work.frontmatter.thumbnailAlt}
+          url={work.url} />
+      ))
+    }
+  </div>
+</BaseLayout>
+)}

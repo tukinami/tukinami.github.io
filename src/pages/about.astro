@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "説明";
+---
+
+<BaseLayout title={pageTitle}>
+  <h1>{pageTitle}</h1>
+  <section>
+    <h2>ここについて</h2>
+    <p>
+      月波 清火が制作し、GitHub上に公開しているものを記録しておくサイトです。
+    </p>
+  </section>
+  <section>
+    <h2>月波 清火(tukinami seika)について</h2>
+    <dl>
+      <dt>出身地</dt><dd>日本</dd>
+      <dt>使用可能言語</dt><dd>日本語, Rust, (TypeScript), etc...</dd>
+      <dt>連絡先</dt><dd>サイト下部に記載</dd>
+      <dt>好きなもの</dt><dd>少年マンガ。絵描き。</dd>
+    </dl>
+  </section>
+</BaseLayout>

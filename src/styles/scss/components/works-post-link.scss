@@ -1,0 +1,18 @@
+.works-post-link {
+  margin-block-start: 1rem;
+
+  flex-basis: 45%;
+  flex-shrink: 1;
+  min-width: 320px;
+  max-width: 600px;
+  // &:not(a) {
+  // }
+}
+
+a.works-post-link {
+  display: block;
+
+  &:hover {
+    background-color: var(--color-filter-base);
+  }
+}

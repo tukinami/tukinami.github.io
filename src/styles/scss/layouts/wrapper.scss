@@ -1,0 +1,14 @@
+@use "../templates/mixins/responsive" as _mixin_responsive;
+
+@use "../variables/shapes" as _var_shapes;
+@use "../mixins/change-background" as _mixins_change-background;
+
+.wrapper {
+  position: relative;
+  padding-top: _var_shapes.$header-height;
+
+  background-color: var(--color-base);
+  color: var(--color-base-text);
+
+  @include _mixins_change-background.change-background();
+}

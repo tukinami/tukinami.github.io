@@ -1,0 +1,20 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  thumbnail: string;
+  thumbnailAlt: string;
+}
+
+const { title, description, thumbnail, thumbnailAlt } = Astro.props;
+---
+
+<div class="works-post-intro">
+  <div class="works-post-intro__info">
+    <h2>{title}</h2>
+    <p>{description}</p>
+  </div>
+  <div class="works-post-intro__thumbnail">
+    <img src={thumbnail} alt={thumbnailAlt} width="256" height="256" />
+  </div>
+</div>

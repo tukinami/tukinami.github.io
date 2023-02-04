@@ -1,0 +1,28 @@
+@use "../templates/mixins/aspect-ratio" as _mixin_aspect-ratio;
+
+@use "../mixins/inset-border" as _mixin_inset-border;
+
+.works-post-intro {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.works-post-intro__info {
+  order: 2;
+  flex-grow: 1;
+
+  & > *:first-child {
+    margin-block-start: 0;
+  }
+}
+
+.works-post-intro__thumbnail {
+  order: 1;
+  flex-shrink: 1;
+  max-width: 100px;
+  max-height: 100px;
+  @include _mixin_aspect-ratio.aspect-ratio(256, 256);
+  @include _mixin_inset-border.inset-border();
+}

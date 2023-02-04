@@ -1,0 +1,46 @@
+@use "../templates/variables/colors" as _var_colors;
+@use "../templates/functions/colors" as _func_colors;
+
+:root {
+  --color-base: #{_var_colors.$color-gray-white};
+  --color-base-text: #{_func_colors.invert-gray(_var_colors.$color-gray-white)};
+
+  --color-shaded: #{_var_colors.$color-gray-light};
+  --color-shaded-text: #{_var_colors.$color-gray-dark};
+
+  --color-error-text: #{_var_colors.$color-danger};
+
+  --color-link-text: #4b2e70;
+  --color-link-active-text: #341856;
+
+  --color-primary: #98c5f2;
+  --color-primary-text: #{_func_colors.invert-gray(#98c5f2)};
+  --color-primary-weak: #b5d4f3;
+  --color-primary-weak-text: #{_func_colors.invert-gray(#b5d4f3)};
+  --color-primary-strong: #61a0e7;
+  --color-primary-strong-text: #{_func_colors.invert-gray(#61a0e7)};
+
+  $color-primary-shaded: _func_colors.darken(#98c5f2);
+  --color-primary-shaded: #{$color-primary-shaded};
+  --color-primary-shaded-text: #{_var_colors.$color-gray-black};
+
+  --color-secondary: #ec9794;
+  --color-secondary-text: #{_func_colors.invert-gray(#ec9794)};
+  --color-secondary-weak: #f4bdb9;
+  --color-secondary-weak-text: #{_func_colors.invert-gray(#f4bdb9)};
+  --color-secondary-strong: #e8776c;
+  --color-secondary-strong-text: #{_func_colors.invert-gray(#e8776c)};
+
+  $color-secondary-shaded: _func_colors.darken(#ec9794);
+  --color-secondary-shaded: #{$color-secondary-shaded};
+  --color-secondary-shaded-text: #{_func_colors.invert-gray(
+      $color-secondary-shaded
+    )};
+
+  --color-border-base: #{_var_colors.$color-gray-middle};
+  --color-border-weak: #{_var_colors.$color-gray-light};
+
+  --color-filter-base: #{_var_colors.$color-filter-black-thin};
+
+  --color-shadow-base: #{_var_colors.$color-filter-black};
+}

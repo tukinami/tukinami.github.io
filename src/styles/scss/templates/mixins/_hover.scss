@@ -1,0 +1,13 @@
+// ref: https://zenn.dev/tak_dcxi/articles/2cc1828e9c1fe2
+
+@mixin hover() {
+    &:focus {
+        @content;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            @content;
+        }
+    }
+}

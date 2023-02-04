@@ -1,0 +1,12 @@
+@use "variables/_font-families" as _font-families;
+
+html {
+    font-family: _font-families.$font-family-sans-serif;
+}
+
+code,
+kbd,
+samp,
+pre {
+    font-family: _font-families.$font-family-monospace;
+}

@@ -1,0 +1,6 @@
+@use "../functions/colors" as _func_colors;
+
+@mixin has-background-color($color) {
+  background-color: $color;
+  color: _func_colors.invert-gray($color);
+}

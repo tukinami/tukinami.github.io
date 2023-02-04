@@ -1,0 +1,47 @@
+// ref: https://zenn.dev/tak_dcxi/articles/2cc1828e9c1fe2
+@use "sass:math";
+
+// @mixin aspect-ratio($width, $height) {
+//     display: block;
+//     position: relative;
+//     width: 100%;
+
+//     &::before {
+//         content: '';
+//         float: left;
+//         padding-top: math.div($height, $width) * 100%;
+//         padding-left: 100%;
+//     }
+
+//     &::after {
+//         content: '';
+//         display: block;
+//         clear: both;
+//     }
+
+//     & > :first-child {
+//         bottom: 0;
+//         height: 100%;
+//         left: 0;
+//         position: absolute;
+//         right: 0;
+//         top: 0;
+//         width: 100%;
+//     }
+// }
+
+@mixin aspect-ratio($width, $height) {
+    aspect-ratio: #{$width} / #{$height};
+    display: block;
+    width: 100%;
+
+    @supports not (aspect-ratio: #{$width} / #{$height}) {
+        padding-top: math.div($height, $width) * 100%;
+    }
+
+    & > :first-child {
+        height: auto;
+        top: 0;
+        width: 100%;
+    }
+}

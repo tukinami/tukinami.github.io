@@ -1,0 +1,65 @@
+@use "../templates/mixins/responsive" as _mixin_responsive;
+@use "../templates/functions/ease" as _func_ease;
+
+@use "../variables/breakpoints" as _var_breakpoints;
+
+.hamburger {
+  position: relative;
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+
+  padding-inline-start: 0.2rem;
+  padding-inline-end: 0.2rem;
+  padding-block-start: 0.2rem;
+  padding-block-end: 0.2rem;
+
+  @include _mixin_responsive.responsive(_var_breakpoints.$header-breakpoint) {
+    display: none;
+  }
+}
+
+.hamburger__line {
+  position: absolute;
+  display: block;
+  width: 2.2rem;
+  height: 0.2rem;
+  border-radius: 0.5rem;
+  background-color: currentColor;
+
+  transition-timing-function: _func_ease.ease("out-circ");
+  transform-origin: center;
+
+  &.hamburger__line--top {
+    top: calc(50% - 0.7rem);
+    transition-property: transform;
+    transition-duration: 0.2s;
+  }
+
+  &.hamburger__line--middle {
+    top: calc(50% - 0.05rem);
+    transition-property: transform opacity;
+    transition-duration: 0.2s;
+  }
+
+  &.hamburger__line--bottom {
+    top: calc(50% + 0.6rem);
+    transition-property: transform;
+    transition-duration: 0.4s;
+  }
+}
+
+.hamburger--active {
+  .hamburger__line--top {
+    transform: translateY(0.65rem) rotate(45deg);
+  }
+
+  .hamburger__line--middle {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+
+  .hamburger__line--bottom {
+    transform: translateY(-0.65rem) rotate(-45deg);
+  }
+}

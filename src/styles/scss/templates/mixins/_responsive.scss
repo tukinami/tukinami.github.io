@@ -1,0 +1,32 @@
+@use "../variables/_breakpoints" as _breakpoints;
+
+// ref: https://zenn.dev/tak_dcxi/articles/2cc1828e9c1fe2
+// ref: https://zenn.dev/kagan/articles/1aa466bb6ef8eb
+@mixin responsive($breakpoint) {
+    @if not map-has-key(_breakpoints.$breakpoints, $breakpoint) {
+        @error "指定されたブレークポイントは定義されていません。" + "指定できるブレークポイントは次のとおりです。 -> #{map-keys($breakpoints)}";
+    }
+
+    $query-body: inspect(map-get(_breakpoints.$breakpoints, $breakpoint));
+
+    @if $breakpoint == 'xs' or $breakpoint == 'sm' {
+        @media screen and #{$query-body} {
+            @content;
+        }
+    }
+    @else {
+        @media screen and #{$query-body}, print {
+            @content;
+        }
+    }
+  // @if map-has-key(_breakpoints.$breakpoints, $breakpoint) {
+  //   @media screen and #{inspect(map-get(_breakpoints.$breakpoints, $breakpoint))} {
+  //     @content;
+  //   }
+  // }
+
+  // // マップ型で定義されていない値が呼び出された時はエラーを返す
+  // @else {
+  //   @error "指定されたブレークポイントは定義されていません。" + "指定できるブレークポイントは次のとおりです。 -> #{map-keys($breakpoints)}";
+  // }
+}

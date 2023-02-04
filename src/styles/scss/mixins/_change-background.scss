@@ -1,0 +1,7 @@
+@use "../templates/functions/ease" as _func_ease;
+
+@mixin change-background() {
+  transition-timing-function: _func_ease.ease("out-circ");
+  transition-property: background-color color;
+  transition-duration: 0.4s;
+}

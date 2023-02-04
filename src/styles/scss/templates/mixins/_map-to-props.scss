@@ -1,0 +1,7 @@
+@mixin map-to-props($map: null) {
+    @if $map {
+        @each $prop, $value in $map {
+            #{inspect($prop)}: #{inspect($value)};
+        }
+    }
+}

@@ -1,0 +1,8 @@
+@use "../templates/variables/font-families" as _var_font-families;
+
+.memory,
+.result,
+.source,
+.input__source {
+  font-family: _var_font-families.$font-family-monospace;
+}

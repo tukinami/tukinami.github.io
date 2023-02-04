@@ -1,0 +1,10 @@
+@use "../templates/mixins/responsive" as _mixin_responsive;
+@use "../templates/functions/font-sizes" as _func_font-sizes;
+
+.title {
+  font-size: _func_font-sizes.font-size("+1");
+
+  @include _mixin_responsive.responsive("sm") {
+    font-size: _func_font-sizes.font-size("+2");
+  }
+}

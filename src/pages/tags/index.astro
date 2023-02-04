@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TagLink from "../../components/TagLink.astro";
+
+const allWorks = await Astro.glob("../works-posts/*.md");
+const tags = [
+  ...new Set(allWorks.map((work) => work.frontmatter.tags).flat()),
+] as string[];
+const pageTitle = "タグ一覧";
+---
+
+<BaseLayout title={pageTitle}>
+  <h1>{pageTitle}</h1>
+  <div class="tags">
+    {tags.map((tag) => <TagLink tagName={tag} />)}
+  </div>
+</BaseLayout>

@@ -1,0 +1,8 @@
+a {
+  &:link {
+    color: var(--color-link-text);
+  }
+  &:active {
+    color: var(--color-link-active-text);
+  }
+}

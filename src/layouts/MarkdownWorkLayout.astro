@@ -1,0 +1,53 @@
+---
+export interface WorkFrontmatter {
+  title: string;
+  pubDate: string;
+  description: string;
+  repository: string;
+  isReleased: boolean;
+  thumbnail: string;
+  thumbnailAlt: string;
+  tags: string[];
+}
+
+export interface Props {
+  frontmatter: WorkFrontmatter;
+}
+
+import BaseLayout from "./BaseLayout.astro";
+import TagLink from "../components/TagLink.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout title={frontmatter.title}>
+  <div><a href="/works">制作物へ</a></div>
+  <article>
+    <header>
+      <h1>{frontmatter.title}</h1>
+      <div>
+        公開日: <time datetime={frontmatter.pubDate}>{frontmatter.pubDate}</time
+        >
+      </div>
+      <div>
+        <a href={frontmatter.repository}>公開レポジトリ</a>{
+          frontmatter.isReleased ? (
+            <>
+              <span> : </span>
+              <a href={`${frontmatter.repository}/releases`}>リリース</a>
+            </>
+          ) : (
+            ""
+          )
+        }
+      </div>
+      <div>{frontmatter.description}</div>
+      <div>
+        タグ: {frontmatter.tags.map((tag) => <TagLink tagName={tag} />)}
+      </div>
+    </header>
+    <div class="markdown-works-post">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,87 @@
+@use "../templates/mixins/responsive" as _mixin_responsive;
+@use "../templates/functions/font-sizes" as _func_font-sizes;
+@use "../templates/functions/ease" as _func_ease;
+@use "../templates/variables/colors" as _var_colors;
+
+@use "../variables/shapes" as _var_shapes;
+@use "../variables/breakpoints" as _var_breakpoints;
+@use "../functions/z-indices" as _func_z-indices;
+@use "../mixins/border" as _mixin_border;
+
+.expand-menu {
+  position: fixed;
+  top: _var_shapes.$header-height;
+  right: 0;
+  width: 20rem;
+  max-width: 80%;
+  height: calc(100vh - #{_var_shapes.$header-height});
+
+  overflow-y: scroll;
+
+  // TODO: mode
+  background-color: var(--color-base);
+  color: var(--color-base-text);
+
+  z-index: _func_z-indices.z-index("expand-menu");
+
+  transition-property: transform background-color color;
+  transition-duration: 0.4s;
+  transition-timing-function: _func_ease.ease("out-circ");
+  transform: translateX(20rem);
+
+  @include _mixin_responsive.responsive(_var_breakpoints.$header-breakpoint) {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: auto;
+    max-width: none;
+    height: 100%;
+
+    overflow-y: auto;
+
+    background-color: transparent;
+    color: currentColor;
+    z-index: _func_z-indices.z-index("header");
+    transform: none;
+
+    display: flex;
+  }
+}
+
+.expand-menu__item {
+  display: block;
+
+  & > a {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    padding-block-start: 0.5rem;
+    padding-block-end: 0.5rem;
+    padding-inline-start: 0.5rem;
+    padding-inline-end: 0.5rem;
+    border: solid 1px transparent;
+    text-decoration: none;
+
+    align-items: center;
+
+    &:hover {
+      background-color: var(--color-filter-base);
+      border-bottom: solid 1px var(--color-border-base);
+    }
+  }
+
+  @include _mixin_responsive.responsive(_var_breakpoints.$header-breakpoint) {
+    height: 100%;
+  }
+}
+
+.expand-menu--active {
+  // TODO: mode
+  box-shadow: 0rem 0.7rem 0.7rem 0.5rem var(--color-shadow-base);
+  transform: translateX(0);
+
+  @include _mixin_responsive.responsive(_var_breakpoints.$header-breakpoint) {
+    box-shadow: none;
+    transform: none;
+  }
+}

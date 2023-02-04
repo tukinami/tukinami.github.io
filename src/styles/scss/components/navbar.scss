@@ -1,0 +1,52 @@
+@use "../variables/_shapes" as _var_shapes;
+@use "../functions/z-indices" as _func_z-indices;
+@use "../mixins/change-background" as _mixin_change-background;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: _var_shapes.$header-height;
+
+  z-index: _func_z-indices.z-index($key: "header");
+
+  display: flex;
+
+  // TODO: mode
+  background-color: var(--color-primary);
+  color: var(--color-primary-text);
+
+  @include _mixin_change-background.change-background();
+}
+
+.navbar__left {
+  height: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+
+  margin-inline-end: auto;
+
+  // & * {
+  //   margin-top: auto;
+  //   margin-bottom: auto;
+  // }
+
+  // & > *:first-child {
+  //   margin-inline-end: auto;
+  // }
+}
+
+.navbar__right {
+  height: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+}
