@@ -17,4 +17,8 @@
     color: var(--color-secondary-text);
     text-decoration: none;
   }
+  &:visited {
+    background-color: var(--color-secondary-weak);
+    color: var(--color-secondary-weak-text);
+  }
 }

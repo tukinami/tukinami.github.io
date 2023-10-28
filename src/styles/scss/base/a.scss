@@ -5,4 +5,7 @@ a {
   &:active {
     color: var(--color-link-active-text);
   }
+  &:visited {
+    color: var(--color-link-visited-text);
+  }
 }
