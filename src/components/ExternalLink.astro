@@ -1,0 +1,17 @@
+---
+import Icon_OpenInNew from "../components/icon/open_in_new.astro";
+
+export interface Props {
+    href: string;
+    relme?: boolean;
+}
+
+const { href, relme } = Astro.props;
+---
+
+<a
+    href={href}
+    target="_blank"
+    rel={relme === true ? "me,noreferrer,noopener" : "noreferrer,noopener"}
+    ><slot /> <Icon_OpenInNew /></a
+>

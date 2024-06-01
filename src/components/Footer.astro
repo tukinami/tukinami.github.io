@@ -1,12 +1,20 @@
 ---
+import ExternalLink from "./ExternalLink.astro";
 ---
 
 <footer class="footer">
-  <p>制作: 月波 清火 / <a href="https://github.com/tukinami">GitHub</a></p>
   <p>
-    <a rel="me" href="https://fedibird.com/@tukinami_seika"
-      >Mastodon/@tukinami_seika@fedibird.com</a
+    制作: 月波 清火 / <ExternalLink href="https://github.com/tukinami"
+      >GitHub</ExternalLink>
+  </p>
+  <p>
+    <ExternalLink relme={true} href="https://fedibird.com/@tukinami_seika"
+      >Mastodon/@tukinami_seika@fedibird.com</ExternalLink
     >
   </p>
-  <p><a href="https://peing.net/ja/tukinami_seika">Peing質問箱</a></p>
+  <p>
+    <ExternalLink href="https://peing.net/ja/tukinami_seika"
+      >Peing質問箱</ExternalLink
+    >
+  </p>
 </footer>
