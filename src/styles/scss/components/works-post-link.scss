@@ -1,8 +1,7 @@
 .works-post-link {
-  margin-block-start: 1rem;
-
-  flex-basis: 45%;
+  flex-basis: calc(50% - 0.5rem);
   flex-shrink: 1;
+  flex-grow: 1;
   min-width: 320px;
   max-width: 600px;
   // &:not(a) {
@@ -10,7 +9,9 @@
 }
 
 a.works-post-link {
-  display: block;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 
   &:hover {
     background-color: var(--color-filter-base);
