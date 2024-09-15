@@ -1,6 +1,8 @@
 // original works : https://qiita.com/xrxoxcxox/items/073d30615a1d73c089fc
 @mixin inset-border() {
-  position: relative;
+  & {
+    position: relative;
+  }
 
   &::before {
     position: absolute;
