@@ -2,9 +2,11 @@
 @use "../variables/_colors" as _var_colors;
 
 @function invert-gray($color) {
-  @if color.lightness($color) > 50% {
+  @if color.channel($color, "lightness", $space: hsl)>50% {
     @return _var_colors.$color-gray-black;
-  } @else {
+  }
+
+  @else {
     @return _var_colors.$color-gray-white;
   }
 }

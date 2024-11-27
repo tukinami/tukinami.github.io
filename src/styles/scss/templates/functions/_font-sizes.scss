@@ -1,10 +1,14 @@
+@use "sass:map";
 @use "../variables/_font-sizes" as _font-sizes;
 
 @function font-size($font-size) {
-    @if map-has-key(_font-sizes.$font-sizes, $font-size) {
-        @return map-get(_font-sizes.$font-sizes, $font-size);
+    $size: map.get(_font-sizes.$font-sizes, $font-size);
+
+    @if not $size {
+        @error "指定されたfont-sizeは定義されていません。"+"指定できるfont-sizeは次のとおりです。 -> #{map.keys(_font-sizes.$font-sizes)}";
     }
+
     @else {
-        @error "指定されたfont-sizeは定義されていません。" + "指定できるfont-sizeは次のとおりです。 -> #{map-keys(_font-sizes.$font-sizes)}";
+        @return $size;
     }
 }

@@ -1,12 +1,16 @@
+@use "sass:map";
 @use "../variables/z-indices" as _var_z-indices;
 
 @function z-index($key) {
-  @if map-has-key($map: _var_z-indices.$z-indices, $key: $key) {
-    @return map-get($map: _var_z-indices.$z-indices, $key: $key);
-  } @else {
-    $keys: map-keys(
-      $map: _var_z-indices.$z-indices,
-    );
-    @error "指定されたz-indexは定義されていません。" + "指定できるz-indexは次のとおりです。 -> #{$keys}";
+  $index: map.get($map: _var_z-indices.$z-indices, $key: $key);
+
+  @if not $index {
+    $keys: map.keys($map: _var_z-indices.$z-indices,
+      );
+    @error "指定されたz-indexは定義されていません。"+"指定できるz-indexは次のとおりです。 -> #{$keys}";
+  }
+
+  @else {
+    @return $index;
   }
 }

@@ -1,12 +1,15 @@
+@use "sass:map";
 @use "../variables/_easings" as _easings;
 
 // ref: https://zenn.dev/tak_dcxi/articles/2cc1828e9c1fe2
 @function ease($easing) {
-  @if map-has-key(_easings.$easings, $easing) {
-    @return map-get(_easings.$easings, $easing);
+  $easingstr: map.get(_easings.$easings, $easing);
+
+  @if not $easingstr {
+    // 定義されていないイージングが指定された時は警告を出して初期値のeaseを返す
+    @warn 'イージング"#{$easing}"は定義されていません';
+    @return ease;
   }
 
-  // 定義されていないイージングが指定された時は警告を出して初期値のeaseを返す
-  @warn 'イージング"#{$easing}"は定義されていません';
-  @return ease;
+  @return $easingstr;
 }
