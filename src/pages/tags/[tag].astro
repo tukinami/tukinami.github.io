@@ -1,7 +1,7 @@
 ---
+import type { MarkdownInstance } from "astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import WorkItem from "../../components/WorksPostLink.astro";
-import type { MarkdownInstance } from "astro";
 
 export interface Params {
   tag: string;
@@ -17,32 +17,32 @@ export interface getStaticPathsReturn {
 }
 
 export async function getStaticPaths(): Promise<getStaticPathsReturn[]> {
-  const allWorks = await Astro.glob("../works-posts/*.md");
+  const allWorks : MarkdownInstance<Record<string, any>>[] = Object.values(import.meta.glob("../works-posts/*.md", { eager: true }));;;
 
   const uniqueTags = [
     ...new Set(allWorks.map((work) => work.frontmatter.tags).flat()),
   ] as string[];
 
   return uniqueTags.map((tag) => {
-    const filteredWorks = allWorks.filter((work) =>
-      work.frontmatter.tags.includes(tag)
-    );
     return {
       params: { tag },
-      props: { works: filteredWorks },
+      props: { works: allWorks },
     };
   });
 }
 
 const { tag } = Astro.params;
 const { works } = Astro.props;
+const filteredWorks = works.filter((work) =>
+      work.frontmatter.tags.includes(tag)
+    );
 ---
 { tag === undefined ? <></> : (
 <BaseLayout title={`${tag}がついたページ`}>
   <h1><span>{tag}</span>がついたページ</h1>
   <div class="works-post-list">
     {
-      works.map((work) => (
+      filteredWorks.map((work) => (
         <WorkItem title={work.frontmatter.title}
           description={work.frontmatter.description}
           thumbnail={work.frontmatter.thumbnail}

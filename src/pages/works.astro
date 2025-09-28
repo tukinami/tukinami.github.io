@@ -1,8 +1,9 @@
 ---
+import type { MarkdownInstance } from "astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import WorksPostLink from "../components/WorksPostLink.astro";
 
-const allWorks = await Astro.glob("../pages/works-posts/*.md");
+const allWorks : MarkdownInstance<Record<string, any>>[] = Object.values(import.meta.glob("./works-posts/*.md", { eager: true }));
 const pageTitle = "制作物";
 ---
 
