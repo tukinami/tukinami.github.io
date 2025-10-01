@@ -17,7 +17,7 @@
   height: calc(100vh - #{_var_shapes.$header-height});
   margin: 0;
 
-  overflow-y: scroll;
+  overflow-y: auto;
 
   // TODO: mode
   background-color: var(--color-base);
