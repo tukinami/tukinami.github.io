@@ -5,7 +5,9 @@
 
 .wrapper {
   position: relative;
-  padding-top: _var_shapes.$header-height;
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
 
   background-color: var(--color-base);
   color: var(--color-base-text);

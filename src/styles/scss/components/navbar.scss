@@ -4,7 +4,7 @@
 @use "../templates/mixins/_responsive" as _mixins_responsive;
 
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;

@@ -3,16 +3,14 @@
 @use "../variables/shapes" as _var_shapes;
 
 .container {
-  min-height: calc(
-    100vh - _var_shapes.$header-height - _var_shapes.$footer-height
-  );
+  flex-grow: 1;
   padding-block-start: 1rem;
   padding-block-end: 1rem;
   padding-inline-start: 0.5rem;
   padding-inline-end: 0.5rem;
 
   @include _mixins_container.container();
-
+  
   & > *:first-child {
     margin-block-start: 0;
   }
