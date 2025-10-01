@@ -1,6 +1,7 @@
 @use "../variables/_shapes" as _var_shapes;
 @use "../functions/z-indices" as _func_z-indices;
 @use "../mixins/change-background" as _mixin_change-background;
+@use "../templates/mixins/_responsive" as _mixins_responsive;
 
 .navbar {
   position: fixed;
@@ -24,25 +25,17 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-inline-start: 1rem;
-  padding-inline-end: 1rem;
+  padding-inline-start: clamp(0.2rem, 3vw, 1rem);
+  padding-inline-end: clamp(0.2rem, 3vw, 1rem);
 
   margin-inline-end: auto;
 
-  // & * {
-  //   margin-top: auto;
-  //   margin-bottom: auto;
-  // }
-
-  // & > *:first-child {
-  //   margin-inline-end: auto;
-  // }
 }
 
 .navbar__right {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-inline-start: 1rem;
-  padding-inline-end: 1rem;
+  padding-inline-start: clamp(0.2rem, 3vw, 1rem);
+  padding-inline-end: clamp(0.2rem, 3vw, 1rem);
 }
