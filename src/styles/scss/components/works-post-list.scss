@@ -1,7 +1,11 @@
+@use "../templates/mixins/_responsive" as _mixins_responsive;
+
 .works-post-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid: auto-flow / 1fr;
   gap: 2rem 1rem;
+
+  @include _mixins_responsive.responsive(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

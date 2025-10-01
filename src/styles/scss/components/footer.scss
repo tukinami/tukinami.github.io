@@ -2,7 +2,7 @@
 @use "../mixins/change-background" as _mixin_change-background;
 
 .footer {
-  height: _var_shapes.$footer-height;
+  min-height: _var_shapes.$footer-height;
   background-color: var(--color-primary);
   color: var(--color-primary-text);
 
