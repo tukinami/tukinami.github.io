@@ -2,12 +2,17 @@
 import type { MarkdownInstance } from "astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import WorksPostLink from "../components/WorksPostLink.astro";
+import Ogp from "../components/Ogp.astro";
 
 const allWorks : MarkdownInstance<Record<string, any>>[] = Object.values(import.meta.glob("./works-posts/*.md", { eager: true }));
 const pageTitle = "制作物";
+const description = "月波 清火の制作したものについて記録しているサイト。制作物一覧。"
 ---
 
 <BaseLayout title={pageTitle}>
+  <Fragment slot="head">
+    <Ogp title={pageTitle} path="works/" description={description}/>
+  </Fragment>
   <h1>{pageTitle}</h1>
   <div class="works-post-list">
     {

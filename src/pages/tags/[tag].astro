@@ -2,6 +2,7 @@
 import type { MarkdownInstance } from "astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import WorkItem from "../../components/WorksPostLink.astro";
+import Ogp from "../../components/Ogp.astro";
 
 export interface Params {
   tag: string;
@@ -36,9 +37,14 @@ const { works } = Astro.props;
 const filteredWorks = works.filter((work) =>
       work.frontmatter.tags.includes(tag)
     );
+const pageTitle = `${tag}がついたページ`
+const description = `月波 清火の制作したものについて記録しているサイト。「${tag}」タグがついたページの一覧。`
 ---
 { tag === undefined ? <></> : (
-<BaseLayout title={`${tag}がついたページ`}>
+<BaseLayout title={pageTitle}>
+  <Fragment slot="head">
+        <Ogp title={pageTitle} path={`tags/${tag}`} description={description} />
+  </Fragment>
   <h1><span>{tag}</span>がついたページ</h1>
   <div class="works-post-list">
     {

@@ -1,9 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Ogp from "../components/Ogp.astro";
 const pageTitle = "トップページ";
+
+const headTags = [];
 ---
 
 <BaseLayout title={pageTitle}>
+  <Fragment slot="head">
+    <Ogp title={pageTitle} path=""/>
+  </Fragment>
   <h1>tukinami.github.io</h1>
   <div>
     <p><a href="/about/">説明</a> : ここや月波 清火について</p>

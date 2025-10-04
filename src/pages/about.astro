@@ -1,9 +1,14 @@
 ---
+import Ogp from "../components/Ogp.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "説明";
+const description = "月波 清火の制作したものについて記録しているサイト。説明ページ。"
 ---
 
 <BaseLayout title={pageTitle}>
+  <Fragment slot="head">
+    <Ogp title={pageTitle} path="about/" description={description}/>
+  </Fragment>
   <h1>{pageTitle}</h1>
   <section>
     <h2>ここについて</h2>

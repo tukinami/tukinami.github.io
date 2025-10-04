@@ -2,15 +2,20 @@
 import type { MarkdownInstance } from "astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TagLink from "../../components/TagLink.astro";
+import Ogp from "../../components/Ogp.astro";
 
 const allWorks : MarkdownInstance<Record<string, any>>[] = Object.values(import.meta.glob("../works-posts/*.md", { eager: true }));
 const tags = [
   ...new Set(allWorks.map((work) => work.frontmatter.tags).flat()),
 ] as string[];
 const pageTitle = "タグ一覧";
+const description = "月波 清火の制作したものについて記録しているサイト。制作物に付属するタグの一覧。"
 ---
 
 <BaseLayout title={pageTitle}>
+  <Fragment slot="head">
+        <Ogp title={pageTitle} path="tags/" description={description} />
+  </Fragment>
   <h1>{pageTitle}</h1>
   <div class="tags">
     {tags.map((tag) => <TagLink tagName={tag} />)}

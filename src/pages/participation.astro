@@ -1,11 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ExternalLink from "../components/ExternalLink.astro";
+import Ogp from "../components/Ogp.astro";
 
 const pageTitle = "参加企画";
+const description = "月波 清火の制作したものについて記録しているサイト。参加企画。"
 ---
 
 <BaseLayout title={pageTitle}>
+    <Fragment slot="head">
+        <Ogp title={pageTitle} path="participation/" description={description} />
+    </Fragment>
     <h1>{pageTitle}</h1>
     <section>
         <h2>ヤンデレ弟ゴースト企画2</h2>
