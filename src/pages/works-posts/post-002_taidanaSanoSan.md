@@ -7,6 +7,9 @@ repository: "https://github.com/tukinami/taidanaSanoSan"
 isReleased: true
 thumbnail: /assets/works-posts/post-002_taidanaSanoSan/thumbnail_x256.png
 thumbnailAlt: "怠惰な佐野さん サムネイル: 青少年「佐野伊織」の顔"
+ogpImage: /assets/works-posts/post-002_taidanaSanoSan/ogp.jpg
+ogpImageAlt: "伺か用ゴースト「怠惰な佐野さん」のOGP画像。青と水色のグラデーションのカーディガンを着た少年「佐野伊織」と猫又「きぬ」が立っている。"
+ogpDescription: "伺か用ゴースト「怠惰な佐野さん」の紹介ページ。"
 tags: ["伺か", "伺か-ゴースト"]
 ---
 
