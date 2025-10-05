@@ -43,7 +43,7 @@ const description = `月波 清火の制作したものについて記録して�
 { tag === undefined ? <></> : (
 <BaseLayout title={pageTitle}>
   <Fragment slot="head">
-        <Ogp title={pageTitle} path={`tags/${tag}`} description={description} />
+        <Ogp title={pageTitle} description={description} />
   </Fragment>
   <h1><span>{tag}</span>がついたページ</h1>
   <div class="works-post-list">

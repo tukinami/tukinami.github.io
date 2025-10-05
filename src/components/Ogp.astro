@@ -3,7 +3,6 @@ export interface Props {
     title: string;
     type?: string;
     description?: string;
-    path: string;
     imagePath?: string;
     imageAlt?: string;
 }
@@ -14,7 +13,7 @@ const title = `${props.title} - tukinami.github.io`;
 const type = props.type ?? "website";
 const description = props.description ?? "月波 清火の制作したものについて記録しているサイト。";
 const baseUrl = "https://tukinami.github.io";
-const url = baseUrl + (props.path === "" ? "" : `/${props.path}`);
+const url = baseUrl + Astro.url.pathname;
 const imagePath = props.imagePath ?? "assets/ogp_default.jpg";
 const imageUrl = baseUrl + "/" + imagePath;
 const imageAlt = props.imageAlt ?? "tukinami.github.ioのOGP画像。サイトの名前とアイコンが描かれている。";
