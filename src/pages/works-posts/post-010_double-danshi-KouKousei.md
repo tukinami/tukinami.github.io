@@ -7,6 +7,9 @@ repository: "https://github.com/tukinami/double-danshi-KouKousei"
 isReleased: true
 thumbnail: /assets/works-posts/post-010_double-danshi-KouKousei/thumbnail_x256.png
 thumbnailAlt: "「ダブル男子高校生」 サムネイル: 男子高校生二人組のイラスト。"
+ogpImage: /assets/works-posts/post-010_double-danshi-KouKousei/ogp.jpg
+ogpImageAlt: "伺か用フリーシェル「ダブル男子高校生」のOGP画像。男子高校生二人組のイラスト。"
+ogpDescription: "伺か用フリーシェル「ダブル男子高校生」の紹介ページ。"
 tags: ["伺か", "伺か-フリーシェル"]
 ---
 
