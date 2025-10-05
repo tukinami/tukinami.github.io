@@ -7,6 +7,9 @@ repository: "https://github.com/tukinami/talismanic_beast_pattern"
 isReleased: true
 thumbnail: /assets/works-posts/post-004_talismanic_beast_pattern/thumbnail_x256.png
 thumbnailAlt: "「魔除けの獣面紋」 サムネイル: 赤い装飾的な縁がついたふきだし。"
+ogpImage: /assets/works-posts/post-004_talismanic_beast_pattern/ogp.jpg
+ogpImageAlt: "伺か用バルーン「魔除けの獣面紋」のOGP画像。赤い装飾的な縁がついたふきだしの画像。"
+ogpDescription: "伺か用バルーン「魔除けの獣面紋」の紹介ページ。"
 tags: ["伺か", "伺か-バルーン"]
 ---
 
