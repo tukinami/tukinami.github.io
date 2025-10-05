@@ -7,6 +7,9 @@ repository: "https://github.com/tukinami/small_HE-Chan_sama"
 isReleased: true
 thumbnail: /assets/works-posts/post-003_small_HE-Chan_sama/thumbnail_x256.png
 thumbnailAlt: "「ちいさなへーちゃんさま」 サムネイル: ドット絵のヘイミル・ロゥ。"
+ogpImage: /assets/works-posts/post-003_small_HE-Chan_sama/ogp.jpg
+ogpImageAlt: "「ヘイミル・ロゥ」用追加シェル「ちいさなへーちゃんさま」 のOGP画像。ドット絵で描かれたヘイミル・ロゥの立ち姿。"
+ogpDescription: "「ヘイミル・ロゥ」用追加シェル「ちいさなへーちゃんさま」の紹介ページ。"
 tags: ["伺か", "伺か-追加シェル(二次創作)"]
 ---
 
