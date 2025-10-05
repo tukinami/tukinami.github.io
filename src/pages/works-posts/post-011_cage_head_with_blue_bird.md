@@ -7,6 +7,9 @@ repository: "https://github.com/tukinami/cage_head_with_blue_bird"
 isReleased: true
 thumbnail: /assets/works-posts/post-011_cage_head_with_blue_bird/thumbnail_x256.png
 thumbnailAlt: "「鳥籠頭と青い鳥」 サムネイル: 青い鳥がいる鳥籠の頭を持った男性のイラスト。"
+ogpImage: /assets/works-posts/post-011_cage_head_with_blue_bird/ogp.jpg
+ogpImageAlt: "伺か用フリーシェル「鳥籠頭と青い鳥」のOGP画像。青い鳥がいる鳥籠の頭を持った男性のイラスト。"
+ogpDescription: "伺か用フリーシェル「鳥籠頭と青い鳥」の紹介ページ。"
 tags: ["伺か", "伺か-フリーシェル"]
 ---
 
