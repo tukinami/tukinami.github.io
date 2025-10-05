@@ -7,6 +7,9 @@ export interface WorkFrontmatter {
   isReleased: boolean;
   thumbnail: string;
   thumbnailAlt: string;
+  ogpImage?: string;
+  ogpImageAlt?: string;
+  ogpDescription?: string;
   tags: string[];
 }
 
@@ -16,11 +19,21 @@ export interface Props {
 
 import BaseLayout from "./BaseLayout.astro";
 import TagLink from "../components/TagLink.astro";
+import Ogp from "../components/Ogp.astro";
 
 const { frontmatter } = Astro.props;
+
+const hasOgp = !(frontmatter.ogpImage === undefined && frontmatter.ogpDescription === undefined) ;
 ---
 
 <BaseLayout title={frontmatter.title}>
+  {
+    hasOgp ? (
+      <Fragment slot="head">
+        <Ogp title={frontmatter.title} imagePath={frontmatter.ogpImage} imageAlt={frontmatter.ogpImageAlt} description={frontmatter.ogpDescription} />
+      </Fragment>
+    ) : null
+  }
   <div><a href="/works">制作物へ</a></div>
   <article>
     <header>
