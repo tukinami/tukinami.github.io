@@ -14,8 +14,8 @@ const type = props.type ?? "website";
 const description = props.description ?? "月波 清火の制作したものについて記録しているサイト。";
 const baseUrl = "https://tukinami.github.io";
 const url = baseUrl + Astro.url.pathname;
-const imagePath = props.imagePath ?? "assets/ogp_default.jpg";
-const imageUrl = baseUrl + "/" + imagePath;
+const imagePath = props.imagePath ?? "/assets/ogp_default.jpg";
+const imageUrl = baseUrl + imagePath;
 const imageAlt = props.imageAlt ?? "tukinami.github.ioのOGP画像。サイトの名前とアイコンが描かれている。";
 ---
 <meta property="og:site_name" content="tukinami.github.io" />
