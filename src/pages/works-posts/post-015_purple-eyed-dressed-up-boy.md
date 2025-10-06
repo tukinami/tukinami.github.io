@@ -7,6 +7,9 @@ repository: "https://github.com/tukinami/purple-eyed-dressed-up-boy"
 isReleased: true
 thumbnail: /assets/works-posts/post-015_purple-eyed-dressed-up-boy/thumbnail_x256.png
 thumbnailAlt: "「パープル・アイの着せ替えボーイ」 サムネイル: 着せ替えがついた少年のフリーシェル。"
+ogpImage: /assets/works-posts/post-015_purple-eyed-dressed-up-boy/ogp.jpg
+ogpImageAlt: "伺か用フリーシェル「パープル・アイの着せ替えボーイ」のOGP画像。紫色の瞳をした少年の着せ替えつきフリーシェル。"
+ogpDescription: "伺か用フリーシェル「パープル・アイの着せ替えボーイ」の紹介ページ。"
 tags: ["伺か", "伺か-フリーシェル"]
 ---
 
