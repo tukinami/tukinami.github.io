@@ -7,6 +7,9 @@ repository: "https://github.com/tukinami/who_is_cursing_him"
 isReleased: true
 thumbnail: /assets/works-posts/post-020_who_is_cursing_him/thumbnail_x256.png
 thumbnailAlt: "誰がための「呪い」 サムネイル: 少年「ルドヴィク・フィリップ・ジェレン」の顔"
+ogpImage: /assets/works-posts/post-020_who_is_cursing_him/ogp.jpg
+ogpImageAlt: "伺か用ゴースト「誰がための「呪い」」のOGP画像。紫の瞳をした少年「ルドヴィク・フィリップ・ジェレン」が立っている。"
+ogpDescription: "伺か用ゴースト「誰がための「呪い」」の紹介ページ。"
 tags: ["伺か", "伺か-ゴースト"]
 ---
 
