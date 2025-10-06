@@ -7,6 +7,7 @@ repository: "https://github.com/tukinami/svg-pie-chart"
 isReleased: false
 thumbnail: /assets/no-image_x256.png
 thumbnailAlt: "svg-pie-chart サムネイル: 専用画像なし"
+ogpDescription: "Rustライブラリ「svg-pie-chart」の紹介ページ。"
 tags: ["Rust", "Rustライブラリ"]
 ---
 
