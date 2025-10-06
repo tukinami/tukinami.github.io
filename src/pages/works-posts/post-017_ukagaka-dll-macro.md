@@ -7,6 +7,7 @@ repository: "https://github.com/tukinami/ukagaka-dll-macro"
 isReleased: false
 thumbnail: /assets/no-image_x256.png
 thumbnailAlt: "ukagaka-dll-macro サムネイル: 専用画像なし"
+ogpDescription: "Rustライブラリ「ukagaka-dll-macro」の紹介ページ。"
 tags: ["伺か", "Rust", "Rustライブラリ"]
 ---
 
