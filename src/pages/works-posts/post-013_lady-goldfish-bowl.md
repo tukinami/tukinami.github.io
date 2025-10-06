@@ -7,6 +7,9 @@ repository: "https://github.com/tukinami/lady-goldfish-bowl"
 isReleased: true
 thumbnail: /assets/works-posts/post-013_lady-goldfish-bowl/thumbnail_x256.png
 thumbnailAlt: "「金魚鉢令嬢」 サムネイル: 金魚がいる金魚鉢の頭を持つ女性のイラスト。"
+ogpImage: /assets/works-posts/post-013_lady-goldfish-bowl/ogp.jpg
+ogpImageAlt: "伺か用フリーシェル「金魚鉢令嬢」のOGP画像。金魚がいる金魚鉢の頭を持つ女性のイラスト。"
+ogpDescription: "伺か用フリーシェル「金魚鉢令嬢」の紹介ページ。"
 tags: ["伺か", "伺か-フリーシェル"]
 ---
 
