@@ -7,6 +7,9 @@ repository: "https://github.com/tukinami/Yada-Yada-Yada"
 isReleased: true
 thumbnail: /assets/works-posts/post-016_Yada-Yada-Yada/thumbnail_x256.png
 thumbnailAlt: "ヤダヤダヤダ！ サムネイル: 少女「矢田るい」の顔"
+ogpImage: /assets/works-posts/post-016_Yada-Yada-Yada/ogp.jpg
+ogpImageAlt: "伺か用ゴースト「ヤダヤダヤダ！」のOGP画像。赤いジャンパースカートを着た少女「矢田るい」が立っている。"
+ogpDescription: "伺か用ゴースト「ヤダヤダヤダ！」の紹介ページ。"
 tags: ["伺か", "伺か-ゴースト"]
 ---
 
