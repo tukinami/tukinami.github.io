@@ -7,6 +7,7 @@ repository: "https://github.com/tukinami/saori-pie-chart"
 isReleased: true
 thumbnail: /assets/no-image_x256.png
 thumbnailAlt: "SAORI pie chart サムネイル: 専用画像なし"
+ogpDescription: "伺か用SAORI「SAORI pie chart」の紹介ページ。"
 tags: ["伺か", "伺か-SAORI"]
 ---
 
