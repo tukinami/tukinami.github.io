@@ -7,6 +7,7 @@ repository: "https://github.com/tukinami/saori-calcs"
 isReleased: true
 thumbnail: /assets/no-image_x256.png
 thumbnailAlt: "Calcs サムネイル: 専用画像なし"
+ogpDescription: "伺か用SAORI「Calcs」の紹介ページ。"
 tags: ["伺か", "伺か-SAORI"]
 ---
 
