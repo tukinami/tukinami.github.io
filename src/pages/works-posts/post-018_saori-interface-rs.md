@@ -7,6 +7,7 @@ repository: "https://github.com/tukinami/saori-interface-rs"
 isReleased: false
 thumbnail: /assets/no-image_x256.png
 thumbnailAlt: "saori-interface-rs サムネイル: 専用画像なし"
+ogpDescription: "Rustライブラリ「saori-interface-rs」の紹介ページ。"
 tags: ["伺か", "Rust", "Rustライブラリ"]
 ---
 
