@@ -7,6 +7,9 @@ repository: "https://github.com/tukinami/incubation_of_animas"
 isReleased: true
 thumbnail: /assets/works-posts/post-014_incubation_of_animas/thumbnail_x256.png
 thumbnailAlt: "孵化する魂 サムネイル: 男性「ジェイソン・クロウ」の顔"
+ogpImage: /assets/works-posts/post-014_incubation_of_animas/ogp.jpg
+ogpImageAlt: "伺か用ゴースト「孵化する魂」のOGP画像。茶色のスーツを着た中年男性「ジェイソン・クロウ」が立っている。"
+ogpDescription: "伺か用ゴースト「孵化する魂」の紹介ページ。"
 tags: ["伺か", "伺か-ゴースト"]
 ---
 
