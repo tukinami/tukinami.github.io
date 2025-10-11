@@ -9,4 +9,4 @@
 ## 連絡先
 
 - [Mastodon/@tukinami_seika@fedibird.com](https://fedibird.com/@tukinami_seika)
-- [Peing 質問箱](https://peing.net/ja/tukinami_seika)
+- [Wavebox](https://wavebox.me/wave/ersk1ec23kr3hrqr/)
