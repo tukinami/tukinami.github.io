@@ -3,6 +3,7 @@ import type { MarkdownInstance } from "astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import WorksPostLink from "../components/WorksPostLink.astro";
 import Ogp from "../components/Ogp.astro";
+import Icon_RssFeed from "../components/icon/rss_feed.astro";
 
 const allWorks : MarkdownInstance<Record<string, any>>[] = Object.values(import.meta.glob("./works-posts/*.md", { eager: true }));
 const pageTitle = "制作物";
@@ -19,7 +20,7 @@ const description = "月波 清火の制作したものについて記録して�
       href={new URL("work-posts.xml", Astro.site)}
     />
   </Fragment>
-  <h1>{pageTitle}</h1>
+  <h1>{pageTitle} <a href={new URL("work-posts.xml", Astro.site)}><Icon_RssFeed /></a></h1>
   <div class="works-post-list">
     {
       allWorks.map((work) => (
