@@ -12,6 +12,12 @@ const description = "月波 清火の制作したものについて記録して�
 <BaseLayout title={pageTitle}>
   <Fragment slot="head">
     <Ogp title={pageTitle} description={description}/>
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="tukinami.github.io - 制作物"
+      href={new URL("work-posts.xml", Astro.site)}
+    />
   </Fragment>
   <h1>{pageTitle}</h1>
   <div class="works-post-list">
