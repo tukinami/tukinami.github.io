@@ -12,6 +12,6 @@ const { href, relme } = Astro.props;
 <a
     href={href}
     target="_blank"
-    rel={relme === true ? "me,noreferrer,noopener" : "noreferrer,noopener"}
+    rel={relme === true ? "me" : "noreferrer,noopener"}
     ><slot /> <Icon_OpenInNew /></a
 >
